@@ -1,0 +1,53 @@
+
+.search-container {
+    background: #1e1e1e;
+    text-align: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #2e2e2e;
+    height: 30px;
+    width: 250px;
+    margin-top: 15px;
+}
+
+.search-box input {
+    border: none;
+    padding: 10px;
+    width: calc(100% - 50px); /* Оставляем место для кнопки */
+    outline: none;
+    font-size: 1rem;
+    color: #fff;
+    background: #2e2e2e;
+    height: 100%;
+}
+
+.search-box button {
+    background: #2e2e2e;
+    border: none;
+    padding: 0;
+    width: 50px;
+    cursor: pointer;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.search-box button img {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle; /* Выровнять по середине */
+    margin-top: -20px;
+}
+
+.search-box button:hover {
+    background: #444;
+}
+

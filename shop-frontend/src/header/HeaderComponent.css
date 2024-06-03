@@ -1,0 +1,29 @@
+.header {
+    background-color: #222;
+    border: 2px solid white;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 10px 10px;
+    position: relative;
+  }
+  
+  .logoContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo {
+    height: 50px;
+    width: auto;
+    border-radius: 5px;
+  }
+  
+  .finder {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
