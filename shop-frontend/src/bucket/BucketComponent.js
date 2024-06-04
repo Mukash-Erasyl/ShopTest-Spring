@@ -6,6 +6,7 @@ import PurchaseService from '../service/PurchaseService';
 import ToggleButton from './ToggleButtonComponent/ToggleButton';
 
 
+
 const BucketComponent = () => {
   const [products, setProducts] = useState([]);
 
@@ -59,10 +60,10 @@ const BucketComponent = () => {
               <p>Availability: {product.availability ? 'In stock' : 'Out of stock'}</p>
               <div className="product-images">
                 {product.images && product.images.map((image, index) => (
-                  <img key={index} src={image} alt={product.name} />
+                  <img key={index} src={require("../img/" + image)} alt={product.name} />
                 ))}
               </div>
-              <ToggleButton product={product} />
+              <button onClick={handleBuyButtonClick}>Купить</button>
             </div>
           ))
         ) : (

@@ -6,6 +6,7 @@ import PurchaseService from '../../service/PurchaseService';
 
 
 
+
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -54,7 +55,7 @@ const ProductDetail = () => {
       <p>Availability: {product.availability ? 'In stock' : 'Out of stock'}</p>
       <div className="product-images">
         {product.images.map((image, index) => (
-          <img key={index} src={image} alt={product.name} />
+          <img key={index} src={"../../img/"+image} alt={product.name} />
         ))}
       </div>
       <button onClick={handleBuyButtonClick}>Купить</button>

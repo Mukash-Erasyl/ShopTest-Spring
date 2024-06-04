@@ -4,6 +4,8 @@ import ProductService from '../service/ProductService';
 import { useNavigate } from 'react-router-dom'; 
 import PurchaseService from '../service/PurchaseService';
 import ToggleButton from '../bucket/ToggleButtonComponent/ToggleButton';
+import img from "../img/span1.png"
+
 
 const ContentComponent = () => {
   const [products, setProducts] = useState([]);
@@ -58,7 +60,8 @@ const ContentComponent = () => {
               <p>Availability: {product.availability ? 'In stock' : 'Out of stock'}</p>
               <div className="product-images">
                 {product.images && product.images.map((image, index) => (
-                  <img key={index} src={image} alt={product.name} />
+                  <img key={index} src={require(`../img/${image}`)} alt={product.name} />
+
                 ))}
               </div>
               <button onClick={() => handleBuyButtonClick(product._id)}>Купить сейчас</button>
