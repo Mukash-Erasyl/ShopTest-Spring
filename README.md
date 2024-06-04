@@ -30,3 +30,26 @@
 
 
 
+POSTMAN
+
+
+getid : <img width="1026" alt="image" src="https://github.com/Mukash-Erasyl/ShopTest-Spring/assets/136822472/efbe9d83-50b0-4d08-8281-6833b6d61b72">
+
+
+get : <img width="1067" alt="image" src="https://github.com/Mukash-Erasyl/ShopTest-Spring/assets/136822472/7046e932-536c-4c2b-ba9f-7d03c372b8ac">
+
+
+post : <img width="1063" alt="image" src="https://github.com/Mukash-Erasyl/ShopTest-Spring/assets/136822472/8da59cd4-45cd-4955-8bff-b1a53b1e55d9">
+
+
+update : <img width="641" alt="image" src="https://github.com/Mukash-Erasyl/ShopTest-Spring/assets/136822472/6741e7c3-9a66-46d7-bf08-b8ac8382cc52"> 
+
+
+delete : <img width="588" alt="image" src="https://github.com/Mukash-Erasyl/ShopTest-Spring/assets/136822472/8e7c2302-3604-4a1d-ac1d-8a360470929b">
+
+
+
+
+
+
+
