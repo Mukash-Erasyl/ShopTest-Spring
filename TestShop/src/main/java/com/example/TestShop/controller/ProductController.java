@@ -71,7 +71,7 @@ public class ProductController {
     }
 
     @GetMapping("/search")
-    public List<Product> searchComix(@RequestParam String keyword) {
+    public List<Product> searchProduct(@RequestParam String keyword) {
         return productService.searchByKeyword(keyword);
     }
 
