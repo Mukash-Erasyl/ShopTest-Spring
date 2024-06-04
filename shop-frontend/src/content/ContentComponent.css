@@ -32,3 +32,11 @@ button {
 button:hover {
   background-color: #45a049;
 }
+
+.btn {
+  background-color: orange;
+}
+
+.btn:hover {
+  background-color: red;
+}

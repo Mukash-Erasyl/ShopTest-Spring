@@ -1,18 +1,19 @@
 import React, { useEffect, useState } from 'react';
-import './ContentComponent.css';
+import './BucketComponent.css';
 import ProductService from '../service/ProductService';
 import { useNavigate } from 'react-router-dom'; 
 import PurchaseService from '../service/PurchaseService';
-import ToggleButton from '../bucket/ToggleButtonComponent/ToggleButton';
+import ToggleButton from './ToggleButtonComponent/ToggleButton';
 
-const ContentComponent = () => {
+
+const BucketComponent = () => {
   const [products, setProducts] = useState([]);
 
   const navigate = useNavigate();
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const productList = await ProductService.getAllProducts();
+        const productList = await ProductService.findByInBucket();
         setProducts(productList || []);
       } catch (error) {
         console.error('There was an error fetching the products!', error);
@@ -61,10 +62,7 @@ const ContentComponent = () => {
                   <img key={index} src={image} alt={product.name} />
                 ))}
               </div>
-              <button onClick={() => handleBuyButtonClick(product._id)}>Купить сейчас</button>
               <ToggleButton product={product} />
-              
-
             </div>
           ))
         ) : (
@@ -75,4 +73,4 @@ const ContentComponent = () => {
   );
 };
 
-export default ContentComponent;
+export default BucketComponent;

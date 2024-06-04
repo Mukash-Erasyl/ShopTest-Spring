@@ -50,4 +50,8 @@ public class ProductService {
     public List<Product> searchByKeyword(String keyword) {
         return productRepository.findByTitleOrGenreOrTagsContaining(keyword);
     }
+
+    public List<Product> findByInBucket(boolean inBucket) {
+        return productRepository.findByInBucket(inBucket);
+    }
 }

@@ -1,0 +1,25 @@
+/* ToggleButton.css */
+.toggle-button {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  .toggle-button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .toggle-button.loading {
+    pointer-events: none; /* Отключаем события указателя во время загрузки */
+    background-color: #ddd;
+    color: #777;
+  }
+  
+  .toggle-button.loading:hover {
+    background-color: #ddd; /* Состояние при наведении во время загрузки */
+  }
+  

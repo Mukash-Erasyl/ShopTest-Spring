@@ -65,6 +65,35 @@ class ProductService {
       return [];
     }
   }
+  
+  async findByInBucket() {
+    try {
+      const response = await axios.get(`${API_URL}/inBucket`);
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching products:', error);
+      return [];
+    }
+  }
+
+  async  updateProductInBucket (product) {
+    try {
+      const response = await axios.put(`${API_URL}/${product._id}`, {
+        name : product.name , 
+        description:product.description , 
+        images:product.images , 
+        price:product.price , 
+        availability:product.availability , 
+        inBucket:!product.inBucket , 
+      });
+      return response.data; // Возвращает данные, возвращенные сервером после обновления
+    } catch (error) {
+      throw error; // Обработка ошибок, если они возникли при выполнении запроса
+    }
+  } 
+
+  
 }
+
 
 export default new ProductService();

@@ -4,6 +4,8 @@ import ProductService from '../../service/ProductService';
 import { useNavigate } from 'react-router-dom'; 
 import PurchaseService from '../../service/PurchaseService';
 
+
+
 const ProductDetail = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
@@ -56,6 +58,7 @@ const ProductDetail = () => {
         ))}
       </div>
       <button onClick={handleBuyButtonClick}>Купить</button>
+      
       <button onClick={handleGoBack}>Назад</button> {/* Добавляем кнопку "Назад" */}
     </div>
   );

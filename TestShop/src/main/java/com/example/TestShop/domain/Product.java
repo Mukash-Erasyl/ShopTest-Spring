@@ -22,6 +22,7 @@ public class Product {
     private BigDecimal price;
 
     private boolean availability = false;
+    private boolean inBucket = false;
 
     private int count;
 
@@ -73,6 +74,14 @@ public class Product {
         this.availability = availability;
     }
 
+    public boolean isInBucket() {
+        return inBucket;
+    }
+
+    public void setInBucket(boolean inBucket) {
+        this.inBucket = inBucket;
+    }
+
     public int getCount() {
         return count;
     }
@@ -80,4 +89,6 @@ public class Product {
     public void setCount(int count) {
         this.count = count;
     }
+
+
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ProductDetail from './content/contentDetail/ContentDetailComponent';
+import BucketComponent from './bucket/BucketComponent';
 
 import Header from './header/HeaderComponent';
 import ContentComponent from './content/ContentComponent';
@@ -21,6 +22,7 @@ function App() {
                 <div className="content">
                     <Routes>
                         <Route path="/"  element={<ContentComponent  />} />
+                        <Route path="/bucket"  element={<BucketComponent  />} />
                         <Route path="/products/:id" element={<ProductDetail />} />
 
                     </Routes>

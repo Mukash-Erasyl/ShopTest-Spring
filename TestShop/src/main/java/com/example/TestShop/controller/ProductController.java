@@ -50,6 +50,7 @@ public class ProductController {
             product.setImages(productDetails.getImages());
             product.setPrice(productDetails.getPrice());
             product.setAvailability(productDetails.isAvailability());
+            product.setInBucket(productDetails.isInBucket());
             product.setCount(productDetails.getCount());
             // Сохраняем обновленный товар
             Product updatedProduct = productService.save(product);
@@ -72,5 +73,10 @@ public class ProductController {
     @GetMapping("/search")
     public List<Product> searchComix(@RequestParam String keyword) {
         return productService.searchByKeyword(keyword);
+    }
+
+    @GetMapping("/inBucket")
+    public List<Product> getProductsInBucket() {
+        return productService.findByInBucket(true);
     }
 }
